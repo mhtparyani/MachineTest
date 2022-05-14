@@ -6,6 +6,7 @@ plugins {
     id 'kotlin-android'
 }
 
+
 android {
     compileSdk 31
 
@@ -75,6 +76,4 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.41'
 
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-
-
 }
