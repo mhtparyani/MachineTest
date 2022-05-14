@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/white"
+    tools:context=".ui.CommentsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_5dsp"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_5dsp"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="@dimen/_60dsp"
+                    android:layout_height="@dimen/_60dsp"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="@dimen/_1dsp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dsp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/nunitoblack"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/__18dsp"
+                    app:layout_constraintBottom_toTopOf="@id/user_name"
+                    app:layout_constraintStart_toEndOf="@+id/profile_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dsp"
+                    android:layout_marginBottom="@dimen/_5dsp"
+                    android:fontFamily="@font/nunitobold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/__16dsp"
+                    app:layout_constraintBottom_toTopOf="@id/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dsp"
+                    android:layout_marginTop="@dimen/_5dsp"
+                    android:fontFamily="@font/nunitolight"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10dsp"
+                    android:layout_marginBottom="@dimen/_5dsp"
+                    android:fontFamily="@font/nnitoregular"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/__16dsp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dsp"
+                    android:layout_marginTop="@dimen/_2dsp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/date" />
+
+                <TextView
+                    android:id="@+id/comments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5dsp"
+                    android:fontFamily="@font/nunitobold"
+                    android:textColor="@color/black"
+                    android:text="@string/comments"
+                    android:textSize="@dimen/__16dsp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_vew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dsp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/comments" />
+
+                <TextView
+                    android:id="@+id/error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunitobold"
+                    android:gravity="center"
+                    android:text="@string/no_comments"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/__18dsp"
+                    android:layout_marginTop="@dimen/_10dsp"
+                    android:layout_marginBottom="@dimen/_20dsp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

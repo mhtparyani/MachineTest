@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/_5dsp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_60dsp"
+        android:layout_height="@dimen/_60dsp"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="@dimen/_1dsp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dsp"
+        android:fontFamily="@font/nunitoblack"
+        android:textColor="@color/black"
+        android:ellipsize="end"
+        android:textSize="@dimen/__18dsp"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/user_name"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dsp"
+        android:layout_marginBottom="@dimen/_5dsp"
+        android:fontFamily="@font/nunitobold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/__16dsp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintBottom_toTopOf="@id/description"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dsp"
+        android:fontFamily="@font/nunitolight"
+        android:ellipsize="end"
+        android:maxLength="200"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/_5dsp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_name" />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dsp"
+        android:layout_marginBottom="@dimen/_5dsp"
+        android:fontFamily="@font/nnitoregular"
+        android:textColor="@color/black"
+        android:textSize="@dimen/__16dsp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/description"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dsp"
+        android:background="@color/black"
+        android:layout_marginTop="@dimen/_2dsp"
+        app:layout_constraintTop_toBottomOf="@id/date"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

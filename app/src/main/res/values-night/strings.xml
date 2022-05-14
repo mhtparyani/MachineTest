@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MyMachineTest</string>
     <string name="no_issue_please_connect">No Data Found! Please Connect to Internet</string>
     <string name="no_comments">No Comments Found!</string>
     <string name="comments">Comments</string>
