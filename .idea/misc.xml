@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MachineTest/app/src/main/res/layout/activity_comments.xml" value="0.32135416666666666" />
+        <entry key="..\:/MachineTest/app/src/main/res/layout/activity_issues.xml" value="0.32135416666666666" />
+        <entry key="..\:/MachineTest/app/src/main/res/layout/comments_list_cell_layout.xml" value="0.32135416666666666" />
+        <entry key="..\:/MachineTest/app/src/main/res/layout/issues_list_cell_layout.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
